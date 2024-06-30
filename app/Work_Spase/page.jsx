@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, createContext } from "react";
 import "./workSpas.css";
 import "./CreatEle.css";
