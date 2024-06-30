@@ -1,0 +1,39 @@
+.contOpt {
+  font-weight: bolder;
+  padding: 5px;
+  margin: 10px;
+  width: 30vh;
+  border: solid 1px;
+  position: fixed;
+  bottom: 25vh;
+  right: 20px;
+  text-align: center;
+  z-index: 2;
+  background-color: hsla(0, 0%, 0%, 0.8);
+  color: hsl(223, 47%, 47%);
+  border-radius: 10px;
+}
+.contOpt button {
+  font-weight: 1000;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.contOpt ul li {
+  width: 80%;
+  cursor: pointer;
+  border-bottom: solid 1px;
+  border-color: hsl(223, 47%, 47%);
+  padding: 5px;
+  margin: 2px;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+.contOpt ul li:hover {
+  margin-left: 15px;
+}

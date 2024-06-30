@@ -1,0 +1,63 @@
+.time {
+  padding: 5px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  width: 300px;
+  font-size: 24px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.time input[type="number"] {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border: solid 2px;
+  width: 100%;
+  text-align: center;
+}
+.time p {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border: 2px solid;
+  flex-basis: 70%;
+  margin: 5px 20px;
+  font-size: 28px;
+  background-color: rgba(0, 0, 255, 0.187);
+}
+.time button {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border: 2px solid black;
+  margin: 5px;
+  padding: 5px;
+  flex-basis: 30%;
+  color: white;
+  font-weight: bold;
+}
+
+.time .btn-start {
+  background-color: rgba(255, 0, 0, 0.675);
+}
+.time .btn-pause {
+  background-color: rgba(0, 0, 255, 0.675);
+}
+.time .btn-change {
+  background-color: rgba(0, 128, 0, 0.675);
+}
+.time .btn-reset {
+  background-color: rgba(128, 0, 128, 0.675);
+}

@@ -1,0 +1,83 @@
+.toDoList {
+  margin: 10px;
+  padding: 10px;
+  border: solid 1px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  background-color: rgba(255, 255, 0, 0.371);
+  text-align: center;
+  font-weight: bold;
+  max-width: 500px;
+}
+.toDoList input {
+  padding: 5px;
+  font-size: 18px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border: solid 1px #ddd;
+  border-right: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.toDoList .send {
+  padding: 5px;
+  font-size: 18px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border: solid 1px #ddd;
+  border-left: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.toDoList ul div {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin: 5px;
+}
+.toDoList ul button {
+  padding: 5px;
+  font-size: 18px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border: solid 1px #ddd;
+  margin: 5px;
+}
+.toDoList ul .remove {
+  color: white;
+  background-color: red;
+}
+
+.toDoList .close-tske {
+  float: right;
+  width: 25px;
+  height: 20px;
+  border-radius: 10px;
+  transition: 0.6s;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -ms-transition: 0.6s;
+  -o-transition: 0.6s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.toDoList .close-tske:hover {
+  background-color: hsl(223, 51%, 52%);
+  color: white;
+}
