@@ -2,10 +2,10 @@
 import React, { useState, useContext } from "react";
 
 import "./Dreg.css";
-import { elementContext } from "../Work_Spase/page"; // Import the context
+import { ElementContext } from "../Work_Spase/page";
 
-const DraggableContainer = () => {
-  let ele = useContext(elementContext);
+export default function DraggableContainer() {
+  let ele = useContext(ElementContext);
 
   const [isDragging, setIsDragging] = useState(false);
   const [initialX, setInitialX] = useState(0);
@@ -62,6 +62,4 @@ const DraggableContainer = () => {
       {ele.ele}
     </div>
   );
-};
-
-export default DraggableContainer;
+}
