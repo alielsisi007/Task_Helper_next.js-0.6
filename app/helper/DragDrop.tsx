@@ -20,10 +20,7 @@ export default function DraggableContainer() {
     setInitialY(e.clientY);
   };
 
-  const handleMouseMove = (e: {
-    clientX: React.SetStateAction<number>;
-    clientY: React.SetStateAction<number>;
-  }) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!isDragging) return;
     const deltaX = e.clientX - initialX;
     const deltaY = e.clientY - initialY;
