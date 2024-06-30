@@ -10,7 +10,7 @@ import Timer from "../Components/Timer/Timer";
 
 export const ElementContext = createContext(null); // Update to ElementContext
 
-const Work_Spase = () => {
+export default function Work_Spase() {
   const [open, setOpen] = useState("none");
   const [components, setComponents] = useState([]);
 
@@ -94,6 +94,4 @@ const Work_Spase = () => {
       </div>
     </div>
   );
-};
-
-export default Work_Spase;
+}
