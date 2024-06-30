@@ -1,4 +1,4 @@
-// File: C:\Users\Ali Elsisi\Desktop\Ali Elsisi\Task_Manger\app\Work_Spase\page.jsx
+// File: C:\Users\Ali Elsisi\Desktop\Ali Elsisi\Task_Manger\app\Work_Spase\page.tsx
 import * as entry from '../../../../app/Work_Spase/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
