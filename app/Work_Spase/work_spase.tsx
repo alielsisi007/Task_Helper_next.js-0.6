@@ -16,7 +16,7 @@ const WorkSpase: React.FC = () => {
     setOpen((prevOpen) => (prevOpen === "none" ? "flex" : "none"));
   };
 
-  const handleOpt = (e: MouseEvent<HTMLLIElement>) => {
+  const handleOpt = (e: { currentTarget: { innerHTML: any; }; }) => {
     const option = e.currentTarget.innerHTML;
 
     let component = null;
