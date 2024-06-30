@@ -27,7 +27,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "app/Components/stopWatch/stopWatch.jsx", "app/Components/Timer/Timer.jsx", "app/Components/To-Do-List/ToDoList.jsx", "app/helper/DragDrop.jsx", "app/Work_Spase/page.jsx", "app/page.jsx"  ],
+, "app/Components/stopWatch/stopWatch.jsx", "app/Components/Timer/Timer.jsx", "app/Components/To-Do-List/ToDoList.jsx", "app/helper/DragDrop.jsx", "app/Work_Spase/page.jsx", "app/page.jsx", "app/AboutUs/page.jsx", "app/Components/Note/Note.jsx"  ],
   "exclude": [
     "node_modules"
   ]
