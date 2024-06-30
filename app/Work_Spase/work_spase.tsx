@@ -7,7 +7,7 @@ import Note from "../Components/Note/Note";
 import ToDoList from "../Components/To-Do-List/ToDoList";
 import DraggableContainer from "../helper/DragDrop";
 import Timer from "../Components/Timer/Timer";
-export const ElementContext = createContext({});
+export const ElementContext = createContext({ ele: <></>, num: 0 });
 const WorkSpase: React.FC = () => {
   const [open, setOpen] = useState("none");
   const [components, setComponents] = useState<JSX.Element[]>([]);
@@ -16,7 +16,7 @@ const WorkSpase: React.FC = () => {
     setOpen((prevOpen) => (prevOpen === "none" ? "flex" : "none"));
   };
 
-  const handleOpt = (e: { currentTarget: { innerHTML: any; }; }) => {
+  const handleOpt = (e: { currentTarget: { innerHTML: any } }) => {
     const option = e.currentTarget.innerHTML;
 
     let component = null;
