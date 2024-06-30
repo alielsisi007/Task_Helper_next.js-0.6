@@ -43,32 +43,26 @@ export default function DraggableContainer() {
       container.remove();
     }
   };
-  const components: { ele: string | number | bigint | boolean | React.ReactPortal | Promise<React.AwaitedReactNode> | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | null | undefined; }[] = [];
-  
+
   return (
     <>
-      {components.map((ele: { ele: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined; }, index: React.Key | null | undefined) => (
-        <div
-          key={index} // Use the index as the key
-          className="conteiner"
-          style={{
-            position: "relative",
-            cursor: isDragging ? "grabbing" : "grab",
-            transform: `translate(${translateX}px, ${translateY}px)`,
-          }}
-          onMouseDown={handleMouseDown}
-          onMouseMove={handleMouseMove}
-          onMouseUp={handleMouseUp}
-        >
-          <button
-            className="close-note"
-            onClick={(event) => handleClose(event)}
-          >
-            X
-          </button>
-          {ele.ele}
-        </div>
-      ))}
+      <div
+        key={ele.num} // Use the index as the key
+        className="conteiner"
+        style={{
+          position: "relative",
+          cursor: isDragging ? "grabbing" : "grab",
+          transform: `translate(${translateX}px, ${translateY}px)`,
+        }}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+      >
+        <button className="close-note" onClick={(event) => handleClose(event)}>
+          X
+        </button>
+        {ele.ele}
+      </div>
     </>
   );
 }
