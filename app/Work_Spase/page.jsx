@@ -1,4 +1,3 @@
-"use client";
 import React, { useState, createContext } from "react";
 import "./workSpas.css";
 import "./CreatEle.css";
@@ -8,8 +7,8 @@ import ToDoList from "../Components/To-Do-List/ToDoList";
 import DraggableContainer from "../helper/DragDrop";
 import Timer from "../Components/Timer/Timer";
 
+export const ElementContext = createContext(null); // Update to ElementContext
 
-export const elementContext = createContext(null);
 const Work_Spase = () => {
   const [open, setOpen] = useState("none");
   const [components, setComponents] = useState([]);
@@ -42,12 +41,12 @@ const Work_Spase = () => {
     if (component) {
       setComponents((prevComponents) => [
         ...prevComponents,
-        <elementContext.Provider
+        <ElementContext.Provider // Update to ElementContext.Provider
           value={{ ele: component, num: prevComponents.length }}
           key={prevComponents.length}
         >
           <DraggableContainer />
-        </elementContext.Provider>,
+        </ElementContext.Provider>,
       ]);
     }
   };
