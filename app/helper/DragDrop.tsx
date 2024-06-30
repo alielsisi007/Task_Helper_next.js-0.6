@@ -37,7 +37,8 @@ export default function DraggableContainer() {
   const handleClose = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
-    const container = event.target.closest(".conteiner");
+    const container = (event.target as HTMLElement).closest(".conteiner");
+
     if (container) {
       container.remove();
     }
