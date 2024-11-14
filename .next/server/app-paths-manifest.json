@@ -1,3 +1,8 @@
 {
-  "/Work_Spase/page": "app/Work_Spase/page.js"
+  "/Work_Spase/page": "app/Work_Spase/page.js",
+  "/Contact/page": "app/Contact/page.js",
+  "/AboutUs/page": "app/AboutUs/page.js",
+  "/page": "app/page.js",
+  "/FeedBack/page": "app/FeedBack/page.js",
+  "/Terms/page": "app/Terms/page.js"
 }

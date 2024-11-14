@@ -35,7 +35,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "app/helper/DragDrop.tsx", "app/Work_Spase/work_spase.tsx", "app/FeedBack/page.jsx"  ],
   "exclude": [
     "node_modules"
   ]

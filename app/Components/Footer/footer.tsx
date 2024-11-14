@@ -15,7 +15,7 @@ function Footer() {
             <Link href={"AboutUs/"}>About Us</Link>
           </li>
           <li>
-            <a href={"https://wa.link/1pdxkz"}>Contact</a>
+            <Link href={"Contact/"}>Contact</Link>
           </li>
           <li>
             <Link href={"Terms/"}>Terms</Link>

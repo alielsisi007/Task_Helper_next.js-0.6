@@ -38,6 +38,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .container .start {
@@ -53,4 +54,14 @@ body {
   letter-spacing: 2px;
   font-size: 22px;
   box-shadow: 250px 0px 8px -31px hsl(223, 51%, 52%) inset;
+}
+@media (max-width: 450px) {
+  .container {
+    max-width: 450px;
+    height: 100%;
+  }
+  .container > div {
+    padding-top: 20px;
+    height: 70vh;
+  }
 }

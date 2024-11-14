@@ -4,7 +4,11 @@ import React from "react";
 import Work_Spase from "./work_spase";
 
 const Page: NextPage = () => {
-  return <Work_Spase />;
+  return (
+ 
+      <Work_Spase />
+ 
+  );
 };
 
 export default Page;

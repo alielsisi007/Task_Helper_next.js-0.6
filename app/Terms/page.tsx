@@ -2,8 +2,8 @@ import React from "react";
 
 function Terms() {
   return (
-    <div>
-      {Array.from({ length: 10 }).map((term) => (
+    <div style={{ display: "flex", width: "90%", height: "50%" }}>
+      {Array.from({ length: 1 }).map((term) => (
         <div
           style={{
             margin: "10px",
@@ -25,7 +25,7 @@ function Terms() {
           >
             The Use
           </h1>
-          <p>| Use it on the computer</p>
+          <p>| Sorry dark theme team</p>
           <p style={{ textAlign: "center", marginTop: "5px" }}>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat
             ipsa, voluptatibus dolores fugit cupiditate pariatur rerum

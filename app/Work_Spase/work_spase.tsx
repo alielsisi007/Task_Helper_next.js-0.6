@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, createContext } from "react";
+import React, { useState, createContext, useEffect } from "react";
 import "./workSpas.css";
 import "./CreatEle.css";
 import StopWatch from "../Components/stopWatch/stopWatch";
@@ -7,10 +7,27 @@ import Note from "../Components/Note/Note";
 import ToDoList from "../Components/To-Do-List/ToDoList";
 import DraggableContainer from "../helper/DragDrop";
 import Timer from "../Components/Timer/Timer";
+import { motion } from "framer-motion";
+
 export const ElementContext = createContext({ ele: <></>, num: 0 });
+
 const WorkSpase: React.FC = () => {
   const [open, setOpen] = useState("none");
   const [components, setComponents] = useState<JSX.Element[]>([]);
+
+  // تخزين إحداثيات الموقع
+  const [x, setX] = useState<number>(0);
+  const [y, setY] = useState<number>(0);
+
+  // عند التحميل الأول، جلب القيم المخزنة من `localStorage`
+  useEffect(() => {
+    const storedX = localStorage.getItem("dragX");
+    const storedY = localStorage.getItem("dragY");
+    if (storedX && storedY) {
+      setX(parseFloat(storedX));
+      setY(parseFloat(storedY));
+    }
+  }, []);
 
   const handleOpen = () => {
     setOpen((prevOpen) => (prevOpen === "none" ? "flex" : "none"));
@@ -50,16 +67,35 @@ const WorkSpase: React.FC = () => {
     }
   };
 
+  // حفظ إحداثيات السحب في `localStorage` بعد الإفلات
+  const handleDragEnd = (
+    event: any,
+    info: {
+      point: {
+        x: React.SetStateAction<number>;
+        y: React.SetStateAction<number>;
+      };
+    }
+  ) => {
+    setX(info.point.x);
+    setY(info.point.y);
+    localStorage.setItem("dragX", info.point.x.toString());
+    localStorage.setItem("dragY", info.point.y.toString());
+  };
+
   return (
     <div className="work">
       <div className="new-Component">{components}</div>
-      <div
+      <motion.div
+        drag
+        dragMomentum={false}
+        onDragEnd={handleDragEnd}
+        initial={{ x: x, y: y }}
         className="contOpt"
         style={{
           margin: "10px",
           border: "solid 1px",
           minWidth: "10%",
-          position: "fixed",
           bottom: "25vh",
           right: "20px",
           textAlign: "center",
@@ -67,6 +103,8 @@ const WorkSpase: React.FC = () => {
           backgroundColor: "hsla(0, 0%, 0%, 0.8)",
           color: "hsl(223, 47%, 47%)",
           borderRadius: "10px",
+          position: "fixed",
+          cursor: "grab",
         }}
       >
         <ul
@@ -89,7 +127,7 @@ const WorkSpase: React.FC = () => {
         >
           ^
         </button>
-      </div>
+      </motion.div>
     </div>
   );
 };
