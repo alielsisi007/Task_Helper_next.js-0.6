@@ -7,8 +7,9 @@ import { ElementContext } from "../Work_Spase/work_spase";
 export default function DraggableContainer() {
   let ele = useContext(ElementContext);
 
-  const handleClose = (event) => {
-    const container = event.target.closest(".conteiner");
+  const handleClose = (event: React.MouseEvent) => {
+    const container = (event.target as HTMLElement).closest(".conteiner");
+
     if (container) {
       container.remove();
     }
